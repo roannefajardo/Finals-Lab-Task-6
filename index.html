@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roanne's EDM Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #8a2be2);
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 12px #ff69b4;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff;
+      color: #ffb6c1;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #ffccff;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #ffb6c1;
+      margin: 20px auto;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 0 15px #ff66cc;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      color: #ffccff;
+      text-align: center;
+      text-shadow: 0 0 5px #ff99ff;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #ff69b4;
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px #ff1493;
+    }
+
+    .card p, .card a {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ffe6f0;
+    }
+
+    .card a {
+      display: inline-block;
+      margin: 0.4rem 0;
+      color: #ffb6c1;
+      text-decoration: none;
+      border-bottom: 1px dashed #fff;
+      transition: 0.3s;
+    }
+
+    .card a:hover {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #1a1a1a;
+      color: #ffb6c1;
+      box-shadow: 0 -4px 12px #da70d6;
+    }
+
+    /* Glitter animation */
+    .glitter {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://i.pinimg.com/originals/0f/38/17/0f3817da1af829075774018b36ebb587.gif');
+      background-repeat: repeat;
+      opacity: 0.08;
+      z-index: 0;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 10s infinite;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    .heart::before, .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+      }
+    }
+
+    /* Ensuring images autofit */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glitter"></div>
+
+  <!-- Floating Hearts -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = `${Math.random() * 100}%`;
+      heart.style.animationDuration = `${5 + Math.random() * 10}s`;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <header>
+    <h1>🌸 Finals Lab Task 6 - MongoDBCRUD 🌸</h1>
+    <p>🌷Shining through code and creativity🌷 </p>
+  </header>
+
+  <section>
+    <h2>Portfolio Overview</h2>
+    <div class="card">
+      <p>This activity involves practicing basic MongoDB functions like creating a database, adding documents, and using find, update, search, and delete commands in a collection.</p>
+    </div>
+
+    <h2>Step by Step Process</h2>
+    <div class="card">
+      <ol>
+    <li><strong>Create a Database</strong>
+      <ul>
+        <li>Begin by either creating a new database or switching to an existing one.</li>
+        <li>This will be the active database for the tasks ahead.</li>
+      </ul>
+    </li>
+    <li><strong>Insert Documents</strong>
+      <ul>
+        <li>Create a collection within the database.</li>
+        <li>Add several documents, each with structured fields like name, age, and address.</li>
+      </ul>
+    </li>
+    <li><strong>Find Documents</strong>
+      <ul>
+        <li>View all documents in the collection.</li>
+        <li>Use query filters to retrieve specific entries based on values like name or ID.</li>
+      </ul>
+    </li>
+    <li><strong>Update Documents</strong>
+      <ul>
+        <li>Find the document you want to change using a condition (e.g., name or ID).</li>
+        <li>Modify the selected field(s) and apply the update.</li>
+        <li>Check if the update was successful.</li>
+      </ul>
+    </li>
+    <li><strong>Search Documents</strong>
+      <ul>
+        <li>Apply conditions (e.g., age above a certain value or status equals something) to find matching documents.</li>
+        <li>Review the search results.</li>
+      </ul>
+    </li>
+    <li><strong>Delete Documents</strong>
+      <ul>
+        <li>Select the document(s) to delete using specific conditions.</li>
+        <li>Remove them from the collection.</li>
+        <li>Confirm the deletion by checking the collection again.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>Screenshots/Queries:</h2>
+
+  <h3>Step 1:</h3>
+  <img src="https://github.com/user-attachments/assets/c7d5ac2b-bb3a-4df2-b81d-42f864106b81" alt="Step 1 - 1">
+  <img src="https://github.com/user-attachments/assets/3c5c56b6-8822-4f1f-94d6-ec6fdbe4da79" alt="Step 1 - 2">
+
+  <h3>Step 2:</h3>
+  <img src="https://github.com/user-attachments/assets/34f8c357-be26-4c13-8982-6083b2ebf560" alt="Step 2">
+
+  <h3>Step 3:</h3>
+  <img src="https://github.com/user-attachments/assets/34843c2d-00d9-4007-9248-97626a3bdc6b" alt="Step 3">
+
+  <h3>Step 4:</h3>
+  <img src="https://github.com/user-attachments/assets/1d2c03ec-e881-461a-9363-6707aedbcc46" alt="Step 4">
+
+  <h3>Step 5:</h3>
+  <img src="https://github.com/user-attachments/assets/6bcf8547-1494-427d-8f45-1267fc8b1561" alt="Step 5">
+
+  <h3>Step 6:</h3>
+  <img src="https://github.com/user-attachments/assets/b8e30745-d12e-44fb-8abd-2b38974dc382" alt="Step 6">
+
+  <h3>Update Documents Screenshots:</h3>
+  <img src="https://github.com/user-attachments/assets/f56e240e-0ca3-4b2d-bb4e-beaaecc8a839" alt="Update 1">
+  <img src="https://github.com/user-attachments/assets/f2e11bcf-ffe9-4a49-b1c9-dde4b55abf30" alt="Update 2">
+  <img src="https://github.com/user-attachments/assets/21f7d610-0133-45b4-84bd-d237cc477bf8" alt="Update 3">
+
+  <h3>Text Search Screenshots:</h3>
+  <img src="https://github.com/user-attachments/assets/0cf54c90-0647-4ab0-b137-8a91bdd68953" alt="Search 1">
+  <img src="https://github.com/user-attachments/assets/700b61c1-8951-421d-a8c7-593b250b4209" alt="Search 2">
+  <img src="https://github.com/user-attachments/assets/bbab0c16-9ac2-4571-a9a0-0645968064cc" alt="Search 3">
+  <img src="https://github.com/user-attachments/assets/344be286-9ea9-46a3-8036-ced22583e38f" alt="Search 4">
+  <img src="https://github.com/user-attachments/assets/b56ecda2-ec20-48b8-8190-f0a56c350eab" alt="Search 5">
+
+  <h3>Delete Document Screenshots:</h3>
+  <img src="https://github.com/user-attachments/assets/30d2c709-0dd8-4140-ba1d-63c905995a11" alt="Delete 1">
+  <img src="https://github.com/user-attachments/assets/afd80dfb-4e20-4f33-b404-2e8f7171ee74" alt="Delete 2">
+
+  <h2>Relationships</h2>
+  <h3>Insert the following documents into a <code>users</code> collection:</h3>
+  <img src="https://github.com/user-attachments/assets/6b33e149-0744-4b58-ab31-8dd0359f902e" alt="Users 1">
+  <img src="https://github.com/user-attachments/assets/22c74e0e-1b90-465f-96ec-8cc1b3a6f78e" alt="Users 2">
+
+  <h3>Insert the following documents into a <code>posts</code> collection:</h3>
+  <img src="https://github.com/user-attachments/assets/43967bc5-e54a-47b7-b880-23d5e216e75b" alt="Posts 1">
+  <img src="https://github.com/user-attachments/assets/6a3607ef-7ca7-45b3-972f-9e58f2b2b673" alt="Posts 2">
+
+  <h3>Insert the following documents into a <code>comments</code> collection:</h3>
+  <img src="https://github.com/user-attachments/assets/c4fa918d-020a-4720-9040-4f7241e1b928" alt="Comments 1">
+  <img src="https://github.com/user-attachments/assets/d97450ae-bf56-4f64-9387-642fd845752c" alt="Comments 2">
+</body>
+</html>
+    </div>
+  </section>
+
+  <footer>
+    🎀Stay Fierce, Stay Fabulous, and keep coding🎀
+  </footer>
+
+</body>
+</html>
